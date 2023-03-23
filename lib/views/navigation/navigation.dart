@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tuto_getx/navigation/next_screen.dart';
+import 'package:tuto_getx/controllers/homeController.dart';
+import 'package:tuto_getx/views/navigation/next_screen.dart';
 
 class Navigation_screen extends StatelessWidget {
   const Navigation_screen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,6 +72,15 @@ class Navigation_screen extends StatelessWidget {
                 //Get.to() Like Navigator.push(context,MaterialPageRoute(builder: (context) => Next_screen(),),);
               },
               child: Text('Get.toNamed("/next/123")'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(
+                  '/counter',
+                );
+                //Get.to() Like Navigator.push(context,MaterialPageRoute(builder: (context) => Next_screen(),),);
+              },
+              child: Text('counter'),
             ),
           ],
         ),

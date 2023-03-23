@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tuto_getx/navigation/navigation.dart';
 import 'package:get/get.dart';
-import 'package:tuto_getx/navigation/next_screen.dart';
+import 'package:tuto_getx/views/counter.dart';
+import 'package:tuto_getx/views/navigation/navigation.dart';
+import 'package:tuto_getx/views/navigation/next_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
           name: '/next/:id',
           page: () => const Next_screen(),
         ),
+        GetPage(name: '/counter', page: () => Counter_page()),
       ],
       routingCallback: (routing) {
         if (routing!.current == '/next') {
